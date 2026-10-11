@@ -1,0 +1,641 @@
+{
+  "name": "Android notification settings by phone brand",
+  "description": {
+    "ru": "Выберите марку телефона и версию Android и получите точный список настроек, из-за которых уведомления и напоминания приходят с опозданием или не приходят вовсе.",
+    "en": "Pick your phone brand and Android version to get the exact list of settings that make notifications and reminders arrive late, or not at all."
+  },
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": {
+    "name": "KIPRI",
+    "url": "https://kipriassistant.com/tools/android-notifications/"
+  },
+  "method": {
+    "ru": "https://kipriassistant.com/how-we-check/",
+    "en": "https://kipriassistant.com/en/how-we-check/"
+  },
+  "checkedAt": "2026-09-26",
+  "androidVersions": [
+    {
+      "id": "old",
+      "name": {
+        "ru": "Android 8-11",
+        "en": "Android 8-11"
+      }
+    },
+    {
+      "id": "12",
+      "name": {
+        "ru": "Android 12",
+        "en": "Android 12"
+      }
+    },
+    {
+      "id": "13",
+      "name": {
+        "ru": "Android 13",
+        "en": "Android 13"
+      }
+    },
+    {
+      "id": "14",
+      "name": {
+        "ru": "Android 14 и новее",
+        "en": "Android 14 and newer"
+      }
+    }
+  ],
+  "symptoms": [
+    {
+      "id": "missed",
+      "name": {
+        "ru": "Не приходят совсем",
+        "en": "Nothing arrives"
+      },
+      "steps": [
+        "post-notifications",
+        "battery",
+        "autostart",
+        "sleeping",
+        "lock-recents"
+      ]
+    },
+    {
+      "id": "silent",
+      "name": {
+        "ru": "Приходят без звука",
+        "en": "Arrive without sound"
+      },
+      "steps": [
+        "channels",
+        "dnd"
+      ]
+    },
+    {
+      "id": "late",
+      "name": {
+        "ru": "Приходят с опозданием",
+        "en": "Arrive late"
+      },
+      "steps": [
+        "exact-alarms",
+        "battery",
+        "autostart",
+        "sleeping"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": "post-notifications",
+      "critical": true,
+      "androidVersions": [
+        "13",
+        "14"
+      ],
+      "vendors": null,
+      "title": {
+        "ru": "Разрешение показывать уведомления",
+        "en": "Permission to show notifications"
+      },
+      "why": {
+        "ru": "С Android 13 приложение обязано спросить это отдельно при первом запуске. Отказ выключает вообще все уведомления приложения, включая напоминания, и второй раз диалог не появится: вернуть можно только руками.",
+        "en": "Since Android 13 an app has to ask for this separately on first launch. Declining switches off every notification the app has, reminders included, and the dialog never appears again: the only way back is by hand."
+      },
+      "where": {
+        "default": {
+          "ru": "Настройки → Приложения → нужное приложение → Уведомления. Переключатель вверху должен быть включён.",
+          "en": "Settings → Apps → your app → Notifications. The toggle at the top must be on."
+        },
+        "samsung": {
+          "ru": "Настройки → Приложения → нужное приложение → Уведомления.",
+          "en": "Settings → Apps → your app → Notifications."
+        },
+        "xiaomi": {
+          "ru": "Настройки → Приложения → Все приложения → нужное приложение → Уведомления.",
+          "en": "Settings → Apps → Manage apps → your app → Notifications."
+        }
+      }
+    },
+    {
+      "id": "exact-alarms",
+      "critical": true,
+      "androidVersions": [
+        "12",
+        "13",
+        "14"
+      ],
+      "vendors": null,
+      "title": {
+        "ru": "Точные будильники",
+        "en": "Alarms and reminders"
+      },
+      "why": {
+        "ru": "Без этого разрешения система вправе сдвинуть напоминание: неточные срабатывания она собирает в пачки и будит телефон один раз на всех, иногда через минуту, иногда через пятнадцать. С Android 14 разрешение перестало выдаваться автоматически даже тем приложениям, которые просят его при установке.",
+        "en": "Without this permission the system is free to move a reminder: inexact alarms get batched, and the phone wakes once for all of them, sometimes a minute later, sometimes fifteen. Since Android 14 it is no longer granted automatically even to apps that declare it at install time."
+      },
+      "where": {
+        "default": {
+          "ru": "Настройки → Приложения → Специальный доступ → Будильники и напоминания. Либо Настройки → Приложения → нужное приложение → Дополнительно.",
+          "en": "Settings → Apps → Special app access → Alarms and reminders. Or Settings → Apps → your app → the advanced section."
+        },
+        "xiaomi": {
+          "ru": "Настройки → Приложения → Все приложения → нужное приложение → Другие разрешения → Будильники и напоминания.",
+          "en": "Settings → Apps → Manage apps → your app → Other permissions → Alarms and reminders."
+        },
+        "huawei": {
+          "ru": "Настройки → Приложения → Специальный доступ → Будильники и напоминания.",
+          "en": "Settings → Apps → Special app access → Alarms and reminders."
+        }
+      }
+    },
+    {
+      "id": "battery",
+      "critical": true,
+      "androidVersions": null,
+      "vendors": null,
+      "title": {
+        "ru": "Батарея: снять ограничения",
+        "en": "Battery: remove restrictions"
+      },
+      "why": {
+        "ru": "Doze усыпляет телефон, когда он лежит неподвижно с выключенным экраном, а корзины ожидания с Android 9 урезают фоновую работу тем приложениям, которые редко открывают. Исключение снимает и то, и другое.",
+        "en": "Doze puts the phone to sleep once it lies still with the screen off, and standby buckets since Android 9 cut background work for apps you rarely open. An exemption lifts both."
+      },
+      "where": {
+        "default": {
+          "ru": "Настройки → Приложения → нужное приложение → Батарея → Без ограничений.",
+          "en": "Settings → Apps → your app → Battery → Unrestricted."
+        },
+        "samsung": {
+          "ru": "Настройки → Приложения → нужное приложение → Батарея → Не ограничено.",
+          "en": "Settings → Apps → your app → Battery → Unrestricted."
+        },
+        "xiaomi": {
+          "ru": "Настройки → Приложения → Все приложения → нужное приложение → Экономия энергии → Без ограничений.",
+          "en": "Settings → Apps → Manage apps → your app → Battery saver → No restrictions."
+        },
+        "huawei": {
+          "ru": "Наберите в поиске по настройкам «Оптимизация работы батареи», найдите нужное приложение и выберите «Запретить».",
+          "en": "Search the settings for battery optimisation, find your app and set it to not be optimised."
+        },
+        "oppo": {
+          "ru": "Настройки → Батарея → Энергопотребление приложений → нужное приложение → разрешить фоновую работу.",
+          "en": "Settings → Battery → App battery management → your app → turn on Allow background activity, Allow foreground activity and Allow auto launch."
+        },
+        "oneplus": {
+          "ru": "Настройки → Батарея → Оптимизация батареи → все приложения → нужное приложение → «Не оптимизировать». Если такого экрана нет, откройте батарею самого приложения и разрешите фоновую активность, как на OPPO.",
+          "en": "Settings → Battery → Battery optimisation → All apps → your app → Don’t optimise. If there is no such screen, open the app’s own battery page and allow background activity, as on OPPO."
+        },
+        "vivo": {
+          "ru": "Настройки → Батарея → Высокое энергопотребление в фоновом режиме → включить для нужного приложения.",
+          "en": "Settings → Battery → High background power consumption → turn it on for your app."
+        },
+        "tecno": {
+          "ru": "Настройки → Управление приложениями → Список приложений → нужное приложение → Аккумулятор → включить «Разрешить работу в фоновом режиме». Там же, в карточке приложения, выключить «Остановить работу приложения при простое».",
+          "en": "Settings → App management → App list → your app → Battery → allow running in the background. On the same app screen, turn off stopping the app when idle."
+        }
+      }
+    },
+    {
+      "id": "autostart",
+      "critical": true,
+      "androidVersions": null,
+      "vendors": [
+        "xiaomi",
+        "huawei",
+        "oppo",
+        "oneplus",
+        "vivo",
+        "tecno"
+      ],
+      "title": {
+        "ru": "Автозапуск",
+        "en": "Autostart"
+      },
+      "why": {
+        "ru": "Оболочка не даёт приложению стартовать после перезагрузки и после того, как его выгрузили из памяти. Напоминание в этот момент показывать просто некому: приложение не запущено и о наступившем времени не узнает.",
+        "en": "The skin refuses to let the app start after a reboot or after it has been cleared from memory. At that point there is nobody to show the reminder: the app is not running and never learns that the time has come."
+      },
+      "where": {
+        "default": {
+          "ru": "Настройки → Приложения → Разрешения → Автозапуск.",
+          "en": "Settings → Apps → Permissions → Autostart."
+        },
+        "xiaomi": {
+          "ru": "Настройки → Приложения → Разрешения → Фоновый автозапуск (в MIUI пункт называется просто «Автозапуск»). То же самое лежит в приложении «Безопасность».",
+          "en": "Settings → Apps → Permissions → Background autostart (plain Autostart on MIUI). The same switch also lives inside the Security app."
+        },
+        "huawei": {
+          "ru": "Настройки → Батарея → Запуск приложений → нужное приложение → выключить «Автоматическое управление» и включить все три галочки: автозапуск, косвенный запуск и работу в фоновом режиме. На Honor раздел может называться просто «Запуск», его находит поиск по настройкам.",
+          "en": "Settings → Battery → App launch → your app → turn off Manage automatically and turn on all three: Auto-launch, Secondary launch, Run in background. If you cannot find the screen, search the settings for \"App launch\"."
+        },
+        "oppo": {
+          "ru": "Настройки → Управление приложениями → нужное приложение → Автозапуск. На realme и в новых прошивках переключатель стоит в разделе батареи этого приложения, рядом с фоновой активностью.",
+          "en": "Settings → App management → your app → Allow auto startup. On realme and newer firmware the switch sits on the app’s battery screen, next to background activity."
+        },
+        "oneplus": {
+          "ru": "Настройки приложения → Батарея → разрешить автозапуск. На части прошивок это отдельный пункт в настройках приложения, проще всего найти его поиском по настройкам.",
+          "en": "App settings → Battery → allow auto launch. On some firmware it is a separate item in the app’s settings; the settings search finds it fastest."
+        },
+        "vivo": {
+          "ru": "Настройки → Дополнительные настройки → Приложения → Автозапуск. Если такого пути нет, наберите «автозапуск» в поиске по настройкам: в разных версиях Funtouch OS и OriginOS раздел лежит по-разному.",
+          "en": "Settings → More settings → Applications → Autostart. If that path does not exist, search the settings for \"autostart\": Funtouch OS and OriginOS keep it in different places depending on the version."
+        },
+        "tecno": {
+          "ru": "Phone Master → Ускорение → Управление автозапуском → включить нужное приложение. Заодно в Phone Master: меню слева сверху → Настройки → Защищённые приложения, добавить его туда.",
+          "en": "Phone Master → Accelerate → Auto-start management → turn on your app. While in Phone Master, open the menu at the top left → Settings → Protected apps and add it there too."
+        }
+      }
+    },
+    {
+      "id": "sleeping",
+      "critical": true,
+      "androidVersions": null,
+      "vendors": [
+        "samsung"
+      ],
+      "title": {
+        "ru": "Спящие приложения",
+        "en": "Sleeping apps"
+      },
+      "why": {
+        "ru": "Samsung ведёт два списка: спящие и глубоко спящие приложения. Глубоко спящее не работает в фоне вообще и уведомлений не показывает, а попасть туда можно автоматически, просто не открывая приложение несколько дней.",
+        "en": "Samsung keeps two lists, sleeping and deep sleeping apps. A deep sleeping app does not run in the background at all and shows no notifications, and it can land there automatically simply because you have not opened it for a few days."
+      },
+      "where": {
+        "default": {
+          "ru": "Настройки → Батарея → Ограничения в фоновом режиме (так в One UI 7 и новее, на прошивках постарше: Настройки → Обслуживание устройства → Батарея → Ограничения в фоновом режиме). Убедиться, что приложения нет ни среди спящих, ни среди приложений в глубоком сне, и добавить его в те, что не уходят в сон автоматически.",
+          "en": "Settings → Battery → Background usage limits on One UI 7 and later; on older firmware it is Settings → Battery and device care → Battery → Background usage limits. Make sure the app is in neither Sleeping apps nor Deep sleeping apps, and add it to Never auto sleeping apps."
+        }
+      }
+    },
+    {
+      "id": "lock-recents",
+      "critical": false,
+      "androidVersions": null,
+      "vendors": [
+        "xiaomi",
+        "oppo",
+        "oneplus",
+        "vivo",
+        "tecno"
+      ],
+      "title": {
+        "ru": "Замок в списке недавних",
+        "en": "Lock the card in recents"
+      },
+      "why": {
+        "ru": "На Xiaomi, vivo, OPPO, realme, Tecno и Infinix очистка списка недавних выгружает приложение целиком, вместе с запланированными уведомлениями. Закреплённая замком карточка это переживает, поэтому закрепление советуют справки vivo и realme.",
+        "en": "On Xiaomi, vivo, OPPO, realme, Tecno and Infinix, clearing the recents list unloads the app entirely, along with everything it had scheduled. A locked card survives that, which is why vivo’s and realme’s own help pages recommend it."
+      },
+      "where": {
+        "default": {
+          "ru": "Открыть список недавних приложений, потянуть карточку вниз или задержать на ней палец и нажать на значок замка.",
+          "en": "Open the recent apps list, pull the card down or press and hold it, then tap the padlock."
+        },
+        "oppo": {
+          "ru": "Открыть список недавних приложений и закрепить карточку замком. В зависимости от прошивки замок прячется в меню карточки или появляется, если потянуть её вниз.",
+          "en": "Open the recent apps list and lock the card. Depending on the firmware the padlock is in the card’s menu or appears when you pull the card down."
+        },
+        "oneplus": {
+          "ru": "Открыть список недавних, нажать и подержать карточку приложения, затем нажать замок в её углу.",
+          "en": "Open recents, press and hold the app’s card, then tap the padlock in its corner."
+        },
+        "vivo": {
+          "ru": "Открыть список недавних приложений, сдвинуть карточку нужного приложения вниз и нажать на значок замка.",
+          "en": "Open the recent apps list, swipe the app’s card down and tap the padlock."
+        },
+        "tecno": {
+          "ru": "Открыть список недавних приложений, нажать на треугольник рядом с названием приложения над карточкой и выбрать «Блокировать».",
+          "en": "Open the recent apps list, tap the small triangle next to the app name above its card and choose to lock it."
+        }
+      }
+    },
+    {
+      "id": "channels",
+      "critical": false,
+      "androidVersions": null,
+      "vendors": null,
+      "title": {
+        "ru": "Важность канала уведомлений",
+        "en": "Notification channel importance"
+      },
+      "why": {
+        "ru": "Канал со средней важностью приходит молча: уведомление в шторке есть, звука нет. Приложение поднять себе важность не может, это делает только человек, поэтому если вы когда-то её убавили, вернуть можно лишь здесь.",
+        "en": "A medium-importance channel arrives silently: the notification is in the shade, the sound is not. An app cannot raise its own importance, only you can, so if you once turned it down this is the only place to put it back."
+      },
+      "where": {
+        "default": {
+          "ru": "Настройки → Приложения → нужное приложение → Уведомления → канал с напоминаниями. Поставить «Срочно» или включить всплывающие уведомления вместе со звуком.",
+          "en": "Settings → Apps → your app → Notifications → the reminders channel. Set it to urgent, or turn on pop-ups together with sound."
+        }
+      }
+    },
+    {
+      "id": "dnd",
+      "critical": false,
+      "androidVersions": null,
+      "vendors": null,
+      "title": {
+        "ru": "Режим «Не беспокоить»",
+        "en": "Do Not Disturb"
+      },
+      "why": {
+        "ru": "Он не отменяет уведомление, а глушит звук. Если ночной режим включается по расписанию и захватывает утро, напоминание придёт беззвучно, и со стороны это выглядит как пропажа.",
+        "en": "It does not cancel the notification, it mutes it. If a night schedule runs into your morning, the reminder arrives silently, and from the outside that looks exactly like a reminder that never came."
+      },
+      "where": {
+        "default": {
+          "ru": "Настройки → Уведомления → Не беспокоить → Исключения. Разрешение обходить режим выдаётся конкретному каналу уведомлений, а не приложению целиком.",
+          "en": "Settings → Notifications → Do Not Disturb → Exceptions. Permission to override the mode is granted to a specific channel, not to the whole app."
+        }
+      }
+    },
+    {
+      "id": "background-data",
+      "critical": false,
+      "androidVersions": null,
+      "vendors": null,
+      "title": {
+        "ru": "Фоновые данные",
+        "en": "Background data"
+      },
+      "why": {
+        "ru": "Это про синхронизацию, а не про сами напоминания: без фоновых данных записи с других устройств приедут только при открытии приложения. Напоминания при этом работают, они живут в системе, а не в сети.",
+        "en": "This one is about sync rather than the reminders themselves: without background data, records from your other devices only arrive when you open the app. Reminders keep working, because they live in the system rather than on the network."
+      },
+      "where": {
+        "default": {
+          "ru": "Настройки → Приложения → нужное приложение → Мобильный интернет и Wi-Fi → включить фоновые данные и работу в режиме экономии трафика.",
+          "en": "Settings → Apps → your app → Mobile data and Wi-Fi → allow background data and allow usage while data saver is on."
+        }
+      }
+    }
+  ],
+  "vendors": [
+    {
+      "id": "stock",
+      "name": {
+        "ru": "Чистый Android (Pixel, Motorola)",
+        "en": "Stock Android (Pixel, Motorola)"
+      },
+      "page": {
+        "ru": "https://kipriassistant.com/tools/android-notifications/pixel/",
+        "en": "https://kipriassistant.com/en/tools/android-notifications/pixel/"
+      },
+      "steps": [
+        "post-notifications",
+        "exact-alarms",
+        "battery",
+        "channels",
+        "dnd",
+        "background-data"
+      ],
+      "sources": {
+        "ru": [],
+        "en": []
+      }
+    },
+    {
+      "id": "samsung",
+      "name": {
+        "ru": "Samsung",
+        "en": "Samsung"
+      },
+      "page": {
+        "ru": "https://kipriassistant.com/tools/android-notifications/samsung/",
+        "en": "https://kipriassistant.com/en/tools/android-notifications/samsung/"
+      },
+      "steps": [
+        "post-notifications",
+        "exact-alarms",
+        "battery",
+        "sleeping",
+        "channels",
+        "dnd",
+        "background-data"
+      ],
+      "sources": {
+        "ru": [
+          {
+            "label": "Samsung: оптимизация батареи Galaxy, списки спящих приложений",
+            "url": "https://www.samsung.com/ru/support/galaxy-battery/optimization/"
+          },
+          {
+            "label": "Samsung: приложения перестают работать в фоновом режиме",
+            "url": "https://www.samsung.com/ru/support/mobile-devices/apps-stop-working-in-background-mode/"
+          },
+          {
+            "label": "Samsung: что изменилось в One UI 7",
+            "url": "https://www.samsung.com/ru/support/mobile-devices/changes-in-one-ui-7"
+          }
+        ],
+        "en": [
+          {
+            "label": "Samsung US: put unused apps to sleep on a Galaxy phone",
+            "url": "https://www.samsung.com/us/support/answer/ANS10003442/"
+          },
+          {
+            "label": "Samsung US: Galaxy battery optimization, Never sleeping apps",
+            "url": "https://www.samsung.com/us/support/galaxy-battery/optimization/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xiaomi",
+      "name": {
+        "ru": "Xiaomi, Redmi, POCO",
+        "en": "Xiaomi, Redmi, POCO"
+      },
+      "page": {
+        "ru": "https://kipriassistant.com/tools/android-notifications/xiaomi/",
+        "en": "https://kipriassistant.com/en/tools/android-notifications/xiaomi/"
+      },
+      "steps": [
+        "post-notifications",
+        "exact-alarms",
+        "battery",
+        "autostart",
+        "lock-recents",
+        "channels",
+        "dnd",
+        "background-data"
+      ],
+      "sources": {
+        "ru": [],
+        "en": []
+      }
+    },
+    {
+      "id": "huawei",
+      "name": {
+        "ru": "Huawei, Honor",
+        "en": "Huawei, Honor"
+      },
+      "page": {
+        "ru": "https://kipriassistant.com/tools/android-notifications/huawei-honor/",
+        "en": "https://kipriassistant.com/en/tools/android-notifications/huawei-honor/"
+      },
+      "steps": [
+        "post-notifications",
+        "exact-alarms",
+        "battery",
+        "autostart",
+        "channels",
+        "dnd",
+        "background-data"
+      ],
+      "sources": {
+        "ru": [],
+        "en": [
+          {
+            "label": "Honor: background apps are forced to close",
+            "url": "https://www.honor.com/global/support/content/en-us00428704/"
+          },
+          {
+            "label": "Honor: App launch, the three switches (in \"Apps launch slowly\")",
+            "url": "https://www.honor.com/mea/support/content/en-us00406923/"
+          },
+          {
+            "label": "Honor 200 Lite specifications: operating system",
+            "url": "https://www.honor.com/global/phones/honor-200-lite/spec/"
+          },
+          {
+            "label": "Huawei nova 8 specifications: operating system",
+            "url": "https://consumer.huawei.com/om/phones/nova8/specs/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "oppo",
+      "name": {
+        "ru": "OPPO, realme",
+        "en": "OPPO, realme"
+      },
+      "page": {
+        "ru": "https://kipriassistant.com/tools/android-notifications/oppo-realme/",
+        "en": "https://kipriassistant.com/en/tools/android-notifications/oppo-realme/"
+      },
+      "steps": [
+        "post-notifications",
+        "exact-alarms",
+        "battery",
+        "autostart",
+        "lock-recents",
+        "channels",
+        "dnd",
+        "background-data"
+      ],
+      "sources": {
+        "ru": [
+          {
+            "label": "OPPO: характеристики Find X9 Pro, операционная система",
+            "url": "https://www.oppo.com/ru/smartphones/series-find-x/find-x9-pro/specs/"
+          }
+        ],
+        "en": [
+          {
+            "label": "OPPO Find X9 Pro specifications: operating system",
+            "url": "https://www.oppo.com/en/smartphones/series-find-x/find-x9-pro/specs/"
+          }
+        ]
+      }
+    },
+    {
+      "id": "oneplus",
+      "name": {
+        "ru": "OnePlus",
+        "en": "OnePlus"
+      },
+      "page": {
+        "ru": "https://kipriassistant.com/tools/android-notifications/oneplus/",
+        "en": "https://kipriassistant.com/en/tools/android-notifications/oneplus/"
+      },
+      "steps": [
+        "post-notifications",
+        "exact-alarms",
+        "battery",
+        "autostart",
+        "lock-recents",
+        "channels",
+        "dnd",
+        "background-data"
+      ],
+      "sources": {
+        "ru": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vivo",
+      "name": {
+        "ru": "vivo, iQOO",
+        "en": "vivo, iQOO"
+      },
+      "page": {
+        "ru": "https://kipriassistant.com/tools/android-notifications/vivo/",
+        "en": "https://kipriassistant.com/en/tools/android-notifications/vivo/"
+      },
+      "steps": [
+        "post-notifications",
+        "exact-alarms",
+        "battery",
+        "autostart",
+        "lock-recents",
+        "channels",
+        "dnd",
+        "background-data"
+      ],
+      "sources": {
+        "ru": [],
+        "en": [
+          {
+            "label": "vivo X300 specifications: operating system",
+            "url": "https://www.vivo.com/en/products/param/x300"
+          },
+          {
+            "label": "iQOO Neo 11 specifications on vivo.com.cn (in Chinese)",
+            "url": "https://www.vivo.com.cn/vivo/param/iqooneo11"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tecno",
+      "name": {
+        "ru": "Tecno, Infinix",
+        "en": "Tecno, Infinix"
+      },
+      "page": {
+        "ru": "https://kipriassistant.com/tools/android-notifications/tecno-infinix/",
+        "en": "https://kipriassistant.com/en/tools/android-notifications/tecno-infinix/"
+      },
+      "steps": [
+        "post-notifications",
+        "exact-alarms",
+        "battery",
+        "autostart",
+        "lock-recents",
+        "channels",
+        "dnd",
+        "background-data"
+      ],
+      "sources": {
+        "ru": [],
+        "en": [
+          {
+            "label": "Tecno FAQ: HiOS section on Freezer",
+            "url": "https://www.tecno-mobile.com/faq/"
+          },
+          {
+            "label": "Carlcare: apps disappearing from the home screen, on unfreezing",
+            "url": "https://www.carlcare.com/ng/tips-detail/apps-disappearing-on-android-and-iphone-home-screen/"
+          }
+        ]
+      }
+    }
+  ]
+}
