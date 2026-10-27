@@ -24,7 +24,7 @@ Applies to: Android 12, Android 13, Android 14 and newer.
 
 Applies to: all Android versions.
 
-**Where to find it.** Settings → Battery → High background power consumption → turn it on for your app.
+**Where to find it.** Settings → Battery → High background power consumption → turn it on for your app. On newer versions the item is called "Background power consumption management": pick "Don't restrict background power usage" for the app, or "Unlimited" on iQOO.
 
 **Why it matters.** Doze puts the phone to sleep once it lies still with the screen off, and standby buckets since Android 9 cut background work for apps you rarely open. An exemption lifts both.
 
@@ -32,7 +32,7 @@ Applies to: all Android versions.
 
 Applies to: all Android versions.
 
-**Where to find it.** Settings → More settings → Applications → Autostart. If that path does not exist, search the settings for "autostart": Funtouch OS and OriginOS keep it in different places depending on the version.
+**Where to find it.** On older versions: Settings → More settings → Applications → Autostart. On Funtouch OS 12 and newer: Settings → Apps & notifications → Special app access → Autostart. If neither exists, search the settings for "autostart".
 
 **Why it matters.** The skin refuses to let the app start after a reboot or after it has been cleared from memory. At that point there is nobody to show the reminder: the app is not running and never learns that the time has come.
 
@@ -40,7 +40,7 @@ Applies to: all Android versions.
 
 Applies to: all Android versions.
 
-**Where to find it.** Open the recent apps list, swipe the app’s card down and tap the padlock.
+**Where to find it.** Open the recent apps list and swipe the app’s card down to lock it, as vivo’s English help describes. The older Russian help does the same through a Control Centre whitelist: drag the app icon down and tap the padlock.
 
 **Why it matters.** On Xiaomi, vivo, OPPO, realme, Tecno and Infinix, clearing the recents list unloads the app entirely, along with everything it had scheduled. A locked card survives that, which is why vivo’s and realme’s own help pages recommend it.
 
@@ -70,6 +70,9 @@ Applies to: all Android versions.
 
 ## Sources
 
+- [vivo: background power consumption management](https://www.vivo.com/en/support/questionList?FAQId=72882)
+- [vivo: lock screen notifications by Funtouch OS version](https://www.vivo.com/en/support/questionList?FAQId=86480)
+- [vivo: Control Centre on the lock screen](https://www.vivo.com/en/support/questionList?FAQId=72456)
 - [vivo X300 specifications: operating system](https://www.vivo.com/en/products/param/x300)
 - [iQOO Neo 11 specifications on vivo.com.cn (in Chinese)](https://www.vivo.com.cn/vivo/param/iqooneo11)
 

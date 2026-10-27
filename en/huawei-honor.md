@@ -24,7 +24,7 @@ Applies to: Android 12, Android 13, Android 14 and newer.
 
 Applies to: all Android versions.
 
-**Where to find it.** Search the settings for battery optimisation, find your app and set it to not be optimised.
+**Where to find it.** Search the settings for battery optimisation, find your app and set it to not be optimised. In the MagicOS 10 guide that name belongs to a different screen with an OPTIMIZE button; if the search lands there, it is not the right place.
 
 **Why it matters.** Doze puts the phone to sleep once it lies still with the screen off, and standby buckets since Android 9 cut background work for apps you rarely open. An exemption lifts both.
 
@@ -32,7 +32,7 @@ Applies to: all Android versions.
 
 Applies to: all Android versions.
 
-**Where to find it.** Settings → Battery → App launch → your app → turn off Manage automatically and turn on all three: Auto-launch, Secondary launch, Run in background. If you cannot find the screen, search the settings for "App launch".
+**Where to find it.** Settings → Battery → App launch (the path in help for Android 9-12) → your app → turn off Manage automatically and turn on all three: Auto-launch, Secondary launch, Run in background. Honor’s current help uses Optimizer → % remaining → App launch. The settings search finds the screen fastest: type "App launch".
 
 **Why it matters.** The skin refuses to let the app start after a reboot or after it has been cleared from memory. At that point there is nobody to show the reminder: the app is not running and never learns that the time has come.
 
@@ -62,6 +62,9 @@ Applies to: all Android versions.
 
 ## Sources
 
+- [Honor: unable to receive notifications from third-party apps](https://www.honor.com/global/support/content/en-us00685514/)
+- [Honor: lock screen notifications not displayed](https://www.honor.com/global/support/content/en-us00445086/)
+- [Honor MagicOS 10 guide: power management](https://www.honor.com/global/support/content/en-us15887652/)
 - [Honor: background apps are forced to close](https://www.honor.com/global/support/content/en-us00428704/)
 - [Honor: App launch, the three switches (in "Apps launch slowly")](https://www.honor.com/mea/support/content/en-us00406923/)
 - [Honor 200 Lite specifications: operating system](https://www.honor.com/global/phones/honor-200-lite/spec/)

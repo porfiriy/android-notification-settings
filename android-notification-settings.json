@@ -176,8 +176,8 @@
           "en": "Settings → Apps → Manage apps → your app → Battery saver → No restrictions."
         },
         "huawei": {
-          "ru": "Наберите в поиске по настройкам «Оптимизация работы батареи», найдите нужное приложение и выберите «Запретить».",
-          "en": "Search the settings for battery optimisation, find your app and set it to not be optimised."
+          "ru": "Наберите в поиске по настройкам «Оптимизация работы батареи», найдите нужное приложение и выберите «Запретить». В руководстве к MagicOS 10 под этим именем другой экран, с советами по экономии и кнопкой «Оптимизировать»: если поиск привёл туда, это не то место.",
+          "en": "Search the settings for battery optimisation, find your app and set it to not be optimised. In the MagicOS 10 guide that name belongs to a different screen with an OPTIMIZE button; if the search lands there, it is not the right place."
         },
         "oppo": {
           "ru": "Настройки → Батарея → Энергопотребление приложений → нужное приложение → разрешить фоновую работу.",
@@ -188,8 +188,8 @@
           "en": "Settings → Battery → Battery optimisation → All apps → your app → Don’t optimise. If there is no such screen, open the app’s own battery page and allow background activity, as on OPPO."
         },
         "vivo": {
-          "ru": "Настройки → Батарея → Высокое энергопотребление в фоновом режиме → включить для нужного приложения.",
-          "en": "Settings → Battery → High background power consumption → turn it on for your app."
+          "ru": "Настройки → Батарея → Высокое энергопотребление в фоновом режиме → включить для нужного приложения. В новых версиях пункт называется «Background power consumption management»: у приложения выберите «Don't restrict background power usage», у iQOO есть вариант «Unlimited».",
+          "en": "Settings → Battery → High background power consumption → turn it on for your app. On newer versions the item is called \"Background power consumption management\": pick \"Don't restrict background power usage\" for the app, or \"Unlimited\" on iQOO."
         },
         "tecno": {
           "ru": "Настройки → Управление приложениями → Список приложений → нужное приложение → Аккумулятор → включить «Разрешить работу в фоновом режиме». Там же, в карточке приложения, выключить «Остановить работу приложения при простое».",
@@ -227,8 +227,8 @@
           "en": "Settings → Apps → Permissions → Background autostart (plain Autostart on MIUI). The same switch also lives inside the Security app."
         },
         "huawei": {
-          "ru": "Настройки → Батарея → Запуск приложений → нужное приложение → выключить «Автоматическое управление» и включить все три галочки: автозапуск, косвенный запуск и работу в фоновом режиме. На Honor раздел может называться просто «Запуск», его находит поиск по настройкам.",
-          "en": "Settings → Battery → App launch → your app → turn off Manage automatically and turn on all three: Auto-launch, Secondary launch, Run in background. If you cannot find the screen, search the settings for \"App launch\"."
+          "ru": "Настройки → Батарея → Запуск приложений (так в справке для Android 9-12) → нужное приложение → выключить «Автоматическое управление» и включить все три галочки: автозапуск, косвенный запуск и работу в фоновом режиме. В актуальной справке Honor путь другой: Диспетчер → Батарея → «Запуск приложений». Быстрее всего экран находит поиск по слову «Запуск».",
+          "en": "Settings → Battery → App launch (the path in help for Android 9-12) → your app → turn off Manage automatically and turn on all three: Auto-launch, Secondary launch, Run in background. Honor’s current help uses Optimizer → % remaining → App launch. The settings search finds the screen fastest: type \"App launch\"."
         },
         "oppo": {
           "ru": "Настройки → Управление приложениями → нужное приложение → Автозапуск. На realme и в новых прошивках переключатель стоит в разделе батареи этого приложения, рядом с фоновой активностью.",
@@ -239,8 +239,8 @@
           "en": "App settings → Battery → allow auto launch. On some firmware it is a separate item in the app’s settings; the settings search finds it fastest."
         },
         "vivo": {
-          "ru": "Настройки → Дополнительные настройки → Приложения → Автозапуск. Если такого пути нет, наберите «автозапуск» в поиске по настройкам: в разных версиях Funtouch OS и OriginOS раздел лежит по-разному.",
-          "en": "Settings → More settings → Applications → Autostart. If that path does not exist, search the settings for \"autostart\": Funtouch OS and OriginOS keep it in different places depending on the version."
+          "ru": "В старых версиях: Настройки → Дополнительные настройки → Приложения → Автозапуск. В Funtouch OS 12 и новее: Settings → Apps & notifications → Special app access → Autostart. Если пути нет, наберите «автозапуск» в поиске по настройкам.",
+          "en": "On older versions: Settings → More settings → Applications → Autostart. On Funtouch OS 12 and newer: Settings → Apps & notifications → Special app access → Autostart. If neither exists, search the settings for \"autostart\"."
         },
         "tecno": {
           "ru": "Phone Master → Ускорение → Управление автозапуском → включить нужное приложение. Заодно в Phone Master: меню слева сверху → Настройки → Защищённые приложения, добавить его туда.",
@@ -303,8 +303,8 @@
           "en": "Open recents, press and hold the app’s card, then tap the padlock in its corner."
         },
         "vivo": {
-          "ru": "Открыть список недавних приложений, сдвинуть карточку нужного приложения вниз и нажать на значок замка.",
-          "en": "Open the recent apps list, swipe the app’s card down and tap the padlock."
+          "ru": "Открыть список недавних приложений и смахнуть карточку нужного приложения вниз, чтобы закрепить её (так в английской справке vivo). В старой русской справке это «Белый список ускорения касанием»: в Центре управления сдвинуть значок приложения вниз и нажать на замок.",
+          "en": "Open the recent apps list and swipe the app’s card down to lock it, as vivo’s English help describes. The older Russian help does the same through a Control Centre whitelist: drag the app icon down and tap the padlock."
         },
         "tecno": {
           "ru": "Открыть список недавних приложений, нажать на треугольник рядом с названием приложения над карточкой и выбрать «Блокировать».",
@@ -488,8 +488,37 @@
         "background-data"
       ],
       "sources": {
-        "ru": [],
+        "ru": [
+          {
+            "label": "Honor: не приходят уведомления от сторонних приложений",
+            "url": "https://www.honor.com/ru/support/content/ru-ru00685514/"
+          },
+          {
+            "label": "Honor: фоновые приложения принудительно закрываются",
+            "url": "https://www.honor.com/ru/support/content/ru-ru00428704/"
+          },
+          {
+            "label": "Honor: уведомления не отображаются на экране блокировки",
+            "url": "https://www.honor.com/ru/support/content/ru-ru00445086/"
+          },
+          {
+            "label": "Honor: управление энергопотреблением (MagicOS 10)",
+            "url": "https://www.honor.com/ru/support/content/ru-ru15891369/"
+          }
+        ],
         "en": [
+          {
+            "label": "Honor: unable to receive notifications from third-party apps",
+            "url": "https://www.honor.com/global/support/content/en-us00685514/"
+          },
+          {
+            "label": "Honor: lock screen notifications not displayed",
+            "url": "https://www.honor.com/global/support/content/en-us00445086/"
+          },
+          {
+            "label": "Honor MagicOS 10 guide: power management",
+            "url": "https://www.honor.com/global/support/content/en-us15887652/"
+          },
           {
             "label": "Honor: background apps are forced to close",
             "url": "https://www.honor.com/global/support/content/en-us00428704/"
@@ -590,8 +619,41 @@
         "background-data"
       ],
       "sources": {
-        "ru": [],
+        "ru": [
+          {
+            "label": "vivo: почему не приходят уведомления от приложений соцсетей",
+            "url": "https://www.vivo.com/ru/support/questionList?FAQId=10819"
+          },
+          {
+            "label": "vivo: высокое энергопотребление в фоновом режиме",
+            "url": "https://www.vivo.com/ru/support/questionList?FAQId=10370"
+          },
+          {
+            "label": "vivo: уведомления на экране блокировки",
+            "url": "https://www.vivo.com/ru/support/questionList?FAQId=10806"
+          },
+          {
+            "label": "vivo: центр управления на экране блокировки (англ.)",
+            "url": "https://www.vivo.com/en/support/questionList?FAQId=72456"
+          },
+          {
+            "label": "vivo: background power consumption management (англ.)",
+            "url": "https://www.vivo.com/en/support/questionList?FAQId=72882"
+          }
+        ],
         "en": [
+          {
+            "label": "vivo: background power consumption management",
+            "url": "https://www.vivo.com/en/support/questionList?FAQId=72882"
+          },
+          {
+            "label": "vivo: lock screen notifications by Funtouch OS version",
+            "url": "https://www.vivo.com/en/support/questionList?FAQId=86480"
+          },
+          {
+            "label": "vivo: Control Centre on the lock screen",
+            "url": "https://www.vivo.com/en/support/questionList?FAQId=72456"
+          },
           {
             "label": "vivo X300 specifications: operating system",
             "url": "https://www.vivo.com/en/products/param/x300"
